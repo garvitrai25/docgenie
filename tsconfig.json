@@ -14,10 +14,10 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
-    "baseUrl": ".",
+    "baseUrl": "client", // <--- UPDATED THIS LINE
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["client/src/*"],
+      "@/*": ["src/*"], // <--- UPDATED THIS LINE
       "@shared/*": ["shared/*"],
       "@assets/*": ["attached_assets/*"]
     }

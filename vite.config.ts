@@ -17,13 +17,16 @@ export default defineConfig(async () => ({
   ],
   resolve: {
     alias: {
-      "@": "src", // This is the correct alias definition
+      "@": "src", // This should now be correct
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    // --- CRITICAL CHANGE HERE ---
+    // Change outDir to "dist" so that Vite outputs to 'client/dist'
+    // This aligns with Vercel's expectation when 'client' is the root directory.
+    outDir: "dist", // <--- UPDATED THIS LINE
     emptyOutDir: true,
   },
   server: {

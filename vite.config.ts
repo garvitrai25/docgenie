@@ -1,4 +1,3 @@
-// docgeniee 2/vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -18,9 +17,7 @@ export default defineConfig(async () => ({
   ],
   resolve: {
     alias: {
-      // THIS IS THE LINE YOU NEED TO CHANGE/CONFIRM!
-      // It should be "src" (relative to the 'client' root), not an absolute path.
-      "@": "src", // <--- ENSURE THIS LINE IS EXACTLY "src"
+      "@": "src", // This is the correct alias definition
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
